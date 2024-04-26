@@ -8,7 +8,7 @@ namespace Solution.ControllVolumeOfLotsAudioSources {
 
         //音源喇叭列表
         public static List<AudioSource> audioSources = new List<AudioSource>();
-
+        //音量值 範圍0.00~1.00
         public static float volume;
 
         //音量控制
@@ -16,23 +16,20 @@ namespace Solution.ControllVolumeOfLotsAudioSources {
         [SerializeField] private Slider slider_Volume;
         [SerializeField] private Text text_Volume;
 
-        //聲音播放按鈕
-        [Header("聲音播放按鈕")]
-        [SerializeField] private List<Button> btns_Play = new List<Button>();
-
         //啟動時執行
         private void Awake() {
             volume = slider_Volume.value;
-            for (int i = 0; i < btns_Play.Count; i++) {
-                int j = i;
-                btns_Play[i].onClick.RemoveAllListeners();
-                btns_Play[i].onClick.AddListener(delegate {
-                    audioSources[j].Play();
-                });
-            }
+            slider_Volume.onValueChanged.RemoveAllListeners();
+            slider_Volume.onValueChanged.AddListener(OnValueChanged_VolumeSlider);
+            OnValueChanged_VolumeSlider(slider_Volume.value);
         }
 
-
+        private void OnValueChanged_VolumeSlider(float v) {
+            text_Volume.text = $"{v * 100:F0}%";
+            for (int i = 0; i < audioSources.Count; i++) {
+                audioSources[i].volume = v;
+            }
+        }
 
     }
 }
