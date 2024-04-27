@@ -12,11 +12,14 @@ namespace Solution.ControllVolumeOfLotsAudioSources {
         /// <summary>
         /// 將自己加到列表中並且註冊事件
         /// </summary>
-        private void Awake() {
+        private void Start() {
             audioSource = this.GetComponent<AudioSource>();
             if (audioSource != null) {
                 audioSource.volume = Core.volume;
-                Core.audioSources.Add(audioSource);
+                if (!Core.audioSources.Contains(audioSource)) {
+                    //列表中不存在自己才加入
+                    Core.audioSources.Add(audioSource);
+                }
             }
             btn_Play.onClick.AddListener(OnClick_Btn);
         }
