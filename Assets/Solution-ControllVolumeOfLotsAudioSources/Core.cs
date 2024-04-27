@@ -18,13 +18,15 @@ namespace Solution.ControllVolumeOfLotsAudioSources {
 
         //啟動時執行
         private void Awake() {
-            volume = slider_Volume.value;
+            volume = 0.5f; //預設50%
             slider_Volume.onValueChanged.RemoveAllListeners();
             slider_Volume.onValueChanged.AddListener(OnValueChanged_VolumeSlider);
-            OnValueChanged_VolumeSlider(slider_Volume.value);
+            slider_Volume.value = volume;
+            OnValueChanged_VolumeSlider(volume);
         }
 
         private void OnValueChanged_VolumeSlider(float v) {
+            volume = v;
             text_Volume.text = $"{v * 100:F0}%";
             for (int i = 0; i < audioSources.Count; i++) {
                 audioSources[i].volume = v;
