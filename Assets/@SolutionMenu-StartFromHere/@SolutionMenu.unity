@@ -248,7 +248,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 691524701}
   - {fileID: 710456169}
+  - {fileID: 812583834}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -265,8 +267,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   list:
-  - name: "\u526F\u9078\u55AE"
+  - name: "\u904A\u6232\u5B58\u6A94\u76F8\u95DC"
+    value: {fileID: 691524700}
+  - name: "\u904A\u6232\u8A2D\u5B9A\u76F8\u95DC"
     value: {fileID: 710456168}
+  - name: "\u7A0B\u5F0F\u8A2D\u8A08\u76F8\u95DC"
+    value: {fileID: 812583833}
+  enableEdit: 0
+--- !u!1 &691524700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 691524701}
+  - component: {fileID: 691524702}
+  m_Layer: 0
+  m_Name: "\u904A\u6232\u5B58\u6A94\u76F8\u95DC"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &691524701
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691524700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 592442315}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &691524702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 691524700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a0848c3cdbb0946b61fa7bbb02e378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list:
+  - name: "\u904A\u6232\u5B58\u8B80\u6A94: \u4F7F\u7528PlayerPrefs"
+    value: {fileID: 102900000, guid: d4b3cc7f110c7f4479122a6f92431113, type: 3}
+  - name: "\u904A\u6232\u5B58\u8B80\u6A94: \u4F7F\u7528Json\u6587\u5B57\u6A94"
+    value: {fileID: 102900000, guid: 7d4e8068374c9d94793b1d92e0beba83, type: 3}
   enableEdit: 0
 --- !u!1 &705507993
 GameObject:
@@ -373,7 +429,7 @@ GameObject:
   - component: {fileID: 710456169}
   - component: {fileID: 710456170}
   m_Layer: 0
-  m_Name: "\u526F\u9078\u55AE"
+  m_Name: "\u904A\u6232\u8A2D\u5B9A\u76F8\u95DC"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -392,7 +448,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 592442315}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &710456170
 MonoBehaviour:
@@ -406,7 +462,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7a0848c3cdbb0946b61fa7bbb02e378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  list: []
+  list:
+  - name: "AudioMixer V.S. \u97F3\u91CF"
+    value: {fileID: 102900000, guid: 9fc0d4010bbf28b4594072e72b8655ab, type: 3}
+  - name: "\u5132\u5B58\u97F3\u91CF\u8A2D\u5B9A"
+    value: {fileID: 102900000, guid: 330d4d99c37858742b8860aae580751f, type: 3}
+  - name: "\u540C\u6642\u63A7\u5236\u591A\u500BAudioSource\u7684\u97F3\u91CF"
+    value: {fileID: 102900000, guid: bc3be3fa0260d764aa4d38adad9824b0, type: 3}
+  - name: "\u8B8A\u66F4\u89E3\u6790\u5EA6 / \u5168\u87A2\u5E55\u5207\u63DB"
+    value: {fileID: 102900000, guid: 1f563211fcffc5d45812e9bc6a48a4fd, type: 3}
+  - name: "\u8B8A\u66F4FPS (FrameRate)"
+    value: {fileID: 102900000, guid: 0133770bde660fd4e9172f02e7535952, type: 3}
   enableEdit: 0
 --- !u!1 &781268782
 GameObject:
@@ -510,6 +576,58 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &812583833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 812583834}
+  - component: {fileID: 812583835}
+  m_Layer: 0
+  m_Name: "\u7A0B\u5F0F\u8A2D\u8A08\u76F8\u95DC"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &812583834
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812583833}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 592442315}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &812583835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812583833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7a0848c3cdbb0946b61fa7bbb02e378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list:
+  - name: "\u8A3B\u89E3\u7BC4\u4F8B\uFF1A\u7121\u8A3B\u89E3\u7A0B\u5F0F\u78BC"
+    value: {fileID: 11500000, guid: 3b0b67cbb5ab67142b3ff6d90454375b, type: 3}
+  - name: "\u8A3B\u89E3\u7BC4\u4F8B\uFF1A\u6709\u8A3B\u89E3\u7A0B\u5F0F\u78BC"
+    value: {fileID: 11500000, guid: 9cd18ea95d0bb304a84206ccc7921849, type: 3}
+  - name: "\u8A3B\u89E3\u7BC4\u4F8B\uFF1A\u8A3B\u89E3+region"
+    value: {fileID: 11500000, guid: 67e24ec7f894e7449be45869b5e55f65, type: 3}
+  enableEdit: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -826,8 +944,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.2
-  m_Text: "\u5C55\u958B Hierarchy \u5217\u8868\u4E2D\u7684\u9078\u55AE\u7269\u4EF6\n\u5F9E
-    Inspector \u958B\u59CB\u5FEB\u901F\u5C0E\u89BD\u7BC4\u4F8B\u5834\u666F"
+  m_Text: "\u5C55\u958B Hierarchy \u5217\u8868\u4E2D\u7684 <color=#FFFF00>\u25C6\u9078\u55AE</color>
+    \u7269\u4EF6\n\u5F9E Inspector \u958B\u59CB\u5FEB\u901F\u5C0E\u89BD\u7BC4\u4F8B\u5834\u666F"
 --- !u!222 &2055307484
 CanvasRenderer:
   m_ObjectHideFlags: 0

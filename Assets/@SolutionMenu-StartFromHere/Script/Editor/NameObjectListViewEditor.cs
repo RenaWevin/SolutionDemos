@@ -19,8 +19,9 @@ namespace SolutionMenu {
         public override void OnInspectorGUI() {
 
             GUILayout.BeginHorizontal();
-            GUILayout.Box("請點兩下你要檢視的目錄物件來進到該物件 ▼");
+            EditorGUILayout.LabelField("請點兩下你要檢視的目錄物件來進到該物件 ▼");
             GUILayout.EndHorizontal();
+            EditorGUILayout.Space(10);
 
             self = target as NameObjectListView;
             SerializedProperty propertyEnableEdit = serializedObject.FindProperty(nameof(self.enableEdit));
@@ -43,6 +44,8 @@ namespace SolutionMenu {
                         EditorGUILayout.ObjectField(propertyItem.objectReferenceValue, typeof(UnityEngine.Object), true);
                         GUILayout.EndHorizontal();
                     }
+
+                    EditorGUILayout.Space(20);
 
                     if (GUILayout.Button("編輯列表", GUILayout.Width(100))) {
                         propertyEnableEdit.boolValue = true;
