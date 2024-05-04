@@ -843,6 +843,8 @@ MonoBehaviour:
     value: {fileID: 102900000, guid: 724415cdb21e7b24bbec282b129e9213, type: 3}
   - name: "\u81EA\u9069\u61C9UI: \u6587\u5B57\u6700\u4F73\u5316\u5927\u5C0F BestFit"
     value: {fileID: 102900000, guid: ccdf46c53a1fd8e4e83446434afd41c3, type: 3}
+  - name: "UI\u9632\u5446: \u907F\u514D\u9EDE\u5230\u4E0A\u5C64UI\u5F8C\u7684\u6309\u9215"
+    value: {fileID: 102900000, guid: 774feffdf5e625849b17654e7117f60d, type: 3}
   enableEdit: 0
 --- !u!1 &1465085636
 GameObject:
